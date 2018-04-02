@@ -126,77 +126,75 @@
         <div class="layui-tab-content" style="min-height: 150px; padding: 5px 0px 0px; height: 803px;">
             <div class="layui-tab-item layui-show">
               <table class="layui-table">
-              <colgroup>
-                <col width="150">
-                <col width="150">
-                <col width="150">
-                <col>
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th>Path</th>
-                  <td colspan="3">{{:path}}</td>
-                </tr>
-                <tr>
-                  <th>Summary</th>
-                  <td colspan="3">{{:summary}}</td>
-                </tr>
-                <tr>
-                  <th>Description</th>
-                  <td colspan="3">{{:description}}</td>
-                </tr>
-                <tr>
-                  <th>Consumes</th>
-                  <td style="width: 250px;">{{:consumes}}</td>
-                  <th>Produces</th>
-                  <td>{{:produces}}</td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- 接口详情页 start-->
-            <fieldset class="layui-elem-field layui-field-title" >
-                <legend>请求参数</legend>
-            </fieldset>
-            <table class="layui-table">
-              <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Parameter Type</th>
-                    <th>Data Type</th>
-                    <th>Required</th>
-                </tr> 
-              </thead>
-              <tbody>
-                {{for parameters}}
+                  <colgroup>
+                    <col width="150">
+                    <col width="150">
+                    <col width="150">
+                    <col>
+                  </colgroup>
+                  <tbody>
                     <tr>
-                        <td>{{:name}}</td>
-                        <td>{{:description}}</td>
-                        <td>{{:in}}</td>
-                        <td>{{:type}}</td>     
-                        {{if required}}
-                            <td><i class="layui-icon">&#xe618;</i></td>
-                        {{else}}
-                            <td></td>
-                        {{/if}}                   
+                      <th>Path</th>
+                      <td colspan="3">{{:path}}</td>
                     </tr>
-                {{/for}}
-              </tbody>
-            </table>
-           <!-- <fieldset class="layui-elem-field layui-field-title" >
-                <legend>响应字段解析</legend>
-            </fieldset>
-            <table class="layui-table">
-              <thead>
-                <tr>
-                    <th>Properties</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                </tr> 
-              </thead>
-              <tbody id="path-body-response-model">
-              </tbody>
-            </table>-->
+                    <tr>
+                      <th>Summary</th>
+                      <td colspan="3">{{:summary}}</td>
+                    </tr>
+                    <tr>
+                      <th>Description</th>
+                      <td colspan="3">{{:description}}</td>
+                    </tr>
+                    <tr>
+                      <th>Consumes</th>
+                      <td style="width: 250px;">{{:consumes}}</td>
+                      <th>Produces</th>
+                      <td>{{:produces}}</td>
+                    </tr>
+                  </tbody>
+              </table>
+                <!-- 接口详情页 start-->
+                <fieldset class="layui-elem-field layui-field-title" ><legend>请求参数</legend></fieldset>
+                <table class="layui-table">
+                  <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Parameter Type</th>
+                        <th>Data Type</th>
+                        <th>Required</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{for parameters}}
+                        <tr>
+                            <td>{{:name}}</td>
+                            <td>{{:description}}</td>
+                            <td>{{:in}}</td>
+                            <td>{{:type}}</td>
+                            {{if required}}
+                                <td><i class="layui-icon">&#xe618;</i></td>
+                            {{else}}
+                                <td></td>
+                            {{/if}}
+                        </tr>
+                    {{/for}}
+                  </tbody>
+                </table>
+               <!-- <fieldset class="layui-elem-field layui-field-title" >
+                    <legend>响应字段解析</legend>
+                </fieldset>
+                <table class="layui-table">
+                  <thead>
+                    <tr>
+                        <th>Properties</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody id="path-body-response-model">
+                  </tbody>
+                </table>-->
             </div>
             <!-- 接口详情页 end-->
             <!-- 调试页面 start-->
@@ -244,15 +242,11 @@
                     {{/for}}
                   </tbody>
                 </table>
-                <div>
-                    <button class="layui-btn" name="btn_submit" onclick="getData('{{:operationId}}')"> 提交 </button>
-                </div>
-                <fieldset class="layui-elem-field layui-field-title" >
-                    <legend>调试响应结果</legend>
-                </fieldset>
-                <div class="responseJson"><pre id="json-response"></pre>
+                <div><button class="layui-btn" name="btn_submit" onclick="getData('{{:operationId}}')"> 提交 </button></div>
+                <fieldset class="layui-elem-field layui-field-title" ><legend>调试响应结果</legend></fieldset>
+                <div class="responseJson"><pre id="json-response"></pre></div>
+                <!-- 调试页面 end-->
             </div>
-            <!-- 调试页面 end-->
         </div>
     </div>
 </script>
