@@ -52,7 +52,7 @@ public class Swagger2Config {
         return new ApiInfoBuilder()
                 //页面标题
                 .title("Spring Boot Swagger2 构建RESTful API")
-                .termsOfServiceUrl("http://localhost:8082/api.html")
+                .termsOfServiceUrl("http://localhost:8080/api.html")
                 //创建人
                 .contact("shuxf")
                 //版本号

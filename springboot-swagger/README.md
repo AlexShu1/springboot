@@ -4,13 +4,13 @@
 
 官方Github：[https://github.com/swagger-api/swagger-core/wiki/Annotations](https://github.com/swagger-api/swagger-core/wiki/Annotations)
 
-启动项目，访问[http://localhost:8082/swagger-ui.html](http://localhost:8082/swagger-ui.html)查看API
+启动项目，访问[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)查看API
 
 注意，此项目示例中，使用了三种ui依赖，每种依赖对应的访问页面不同：
 ```
-springfox-swagger-ui -> http://localhost:8082/swagger-ui.html    
-swagger-bootstrap-ui -> http://localhost:8082/doc.html    
-swagger-ui-layer -> http://localhost:8082/docs.html
+springfox-swagger-ui -> http://localhost:8080/swagger-ui.html    
+swagger-bootstrap-ui -> http://localhost:8080/doc.html    
+swagger-ui-layer -> http://localhost:8080/docs.html
 ```
 
 
@@ -97,7 +97,7 @@ public class UserController {
 
 本例是使用的swagger-ui-layer主题（链接请见本文最后）。使用自定义api页面就不需要在pom中配置ui依赖了，详情查看static目录    
 
-api页面访问地址：[http://localhost:8082/api.html](http://localhost:8082/api.html)
+api页面访问地址：[http://localhost:8080/api.html](http://localhost:8080/api.html)
 
 #### 页面效果参考
 
