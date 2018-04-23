@@ -48,7 +48,7 @@ public class QuartzConfig {
         prop.put("org.quartz.threadPool.threadCount", "5");
 
         prop.put("org.quartz.dataSource.quartzDataSource.driver", "com.mysql.jdbc.Driver");
-        prop.put("org.quartz.dataSource.quartzDataSource.URL", "jdbc:mysql://120.77.214.187:3306/movision");
+        prop.put("org.quartz.dataSource.quartzDataSource.URL", "jdbc:mysql://120.77.214.187:3306/test");
         prop.put("org.quartz.dataSource.quartzDataSource.user", "root");
         prop.put("org.quartz.dataSource.quartzDataSource.password", "test123456");
         prop.put("org.quartz.dataSource.quartzDataSource.maxConnections", "10");
