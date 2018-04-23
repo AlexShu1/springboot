@@ -29,6 +29,7 @@
         <module>springboot-interceptor</module>
         <module>springboot-validator</module>
 		<module>springboot-websocket</module>
+        <module>springboot-quartz</module>
     </modules>
 
 	<parent>
