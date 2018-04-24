@@ -19,12 +19,12 @@ public class ScheduleTask {
 
     public final static long SECOND = 1 * 1000;
 
-        FastDateFormat fdf = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss");
+    FastDateFormat fdf = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss");
 
-        @Scheduled(cron = "0/4 * * * * ?")
-        public void cronJob() {
-            logger.info("开始执行task定时任务");
-            logger.info("[CronJob Execute]"+fdf.format(new Date()));
-        }
+    @Scheduled(cron = "0/4 * * * * ?")
+    public void cronJob() {
+        logger.info("开始执行task定时任务");
+        logger.info("[CronJob Execute]"+fdf.format(new Date()));
+    }
 
 }
