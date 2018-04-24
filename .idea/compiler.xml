@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="consul-client" />
+        <module name="consul-consumer" />
+        <module name="eureka-client" />
+        <module name="eureka-consumer" />
+        <module name="eureka-server" />
+        <module name="springboot-aop" />
+        <module name="springboot-docker" />
+        <module name="springboot-errorpage" />
+        <module name="springboot-exception" />
+        <module name="springboot-freemark" />
+        <module name="springboot-interceptor" />
+        <module name="springboot-jsp" />
+        <module name="springboot-logback" />
+        <module name="springboot-mail" />
+        <module name="springboot-multi-datasource" />
+        <module name="springboot-mybatis" />
+        <module name="springboot-poi" />
+        <module name="springboot-property" />
+        <module name="springboot-quartz" />
+        <module name="springboot-restdocs" />
+        <module name="springboot-schedule" />
+        <module name="springboot-servlet" />
+        <module name="springboot-session" />
+        <module name="springboot-ssl" />
+        <module name="springboot-swagger" />
+        <module name="springboot-validator" />
+        <module name="springboot-websocket" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consul-client" target="1.7" />
+      <module name="consul-consumer" target="1.7" />
+      <module name="eureka-client" target="1.7" />
+      <module name="eureka-consumer" target="1.7" />
+      <module name="eureka-server" target="1.7" />
+      <module name="springboot" target="1.7" />
+      <module name="springboot-aop" target="1.7" />
+      <module name="springboot-docker" target="1.7" />
+      <module name="springboot-errorpage" target="1.7" />
+      <module name="springboot-exception" target="1.7" />
+      <module name="springboot-freemark" target="1.7" />
+      <module name="springboot-interceptor" target="1.7" />
+      <module name="springboot-jsp" target="1.7" />
+      <module name="springboot-logback" target="1.7" />
+      <module name="springboot-mail" target="1.7" />
+      <module name="springboot-multi-datasource" target="1.7" />
+      <module name="springboot-mybatis" target="1.7" />
+      <module name="springboot-poi" target="1.7" />
+      <module name="springboot-property" target="1.7" />
+      <module name="springboot-quartz" target="1.7" />
+      <module name="springboot-restdocs" target="1.7" />
+      <module name="springboot-schedule" target="1.7" />
+      <module name="springboot-servlet" target="1.7" />
+      <module name="springboot-session" target="1.7" />
+      <module name="springboot-ssl" target="1.7" />
+      <module name="springboot-swagger" target="1.7" />
+      <module name="springboot-validator" target="1.7" />
+      <module name="springboot-websocket" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

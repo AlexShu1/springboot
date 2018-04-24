@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-aop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-cloud-consul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-cloud-consul-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-cloud-eureka-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-cloud-eureka-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-cloud-eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-errorpage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-exception" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-freemark" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-interceptor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-logback" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-mail" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-multi-datasource" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-poi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-property" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-quartz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-restdocs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-schedule" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-servlet" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-session" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-ssl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-swagger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-validator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-websocket" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

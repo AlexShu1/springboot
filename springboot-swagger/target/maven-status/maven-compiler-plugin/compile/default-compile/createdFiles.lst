@@ -1,0 +1,4 @@
+com\zyd\entity\User.class
+com\zyd\config\Swagger2Config.class
+com\zyd\Applaction.class
+com\zyd\controller\UserController.class

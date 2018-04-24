@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/springboot-cloud-consul/consul-client.iml" filepath="$PROJECT_DIR$/springboot-cloud-consul/consul-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-cloud-consul-consumer/consul-consumer.iml" filepath="$PROJECT_DIR$/springboot-cloud-consul-consumer/consul-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-cloud-eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/springboot-cloud-eureka-client/eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-cloud-eureka-consumer/eureka-consumer.iml" filepath="$PROJECT_DIR$/springboot-cloud-eureka-consumer/eureka-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-cloud-eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/springboot-cloud-eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot.iml" filepath="$PROJECT_DIR$/springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-aop/springboot-aop.iml" filepath="$PROJECT_DIR$/springboot-aop/springboot-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-docker/springboot-docker.iml" filepath="$PROJECT_DIR$/springboot-docker/springboot-docker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-errorpage/springboot-errorpage.iml" filepath="$PROJECT_DIR$/springboot-errorpage/springboot-errorpage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-exception/springboot-exception.iml" filepath="$PROJECT_DIR$/springboot-exception/springboot-exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-freemark/springboot-freemark.iml" filepath="$PROJECT_DIR$/springboot-freemark/springboot-freemark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-interceptor/springboot-interceptor.iml" filepath="$PROJECT_DIR$/springboot-interceptor/springboot-interceptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-jsp/springboot-jsp.iml" filepath="$PROJECT_DIR$/springboot-jsp/springboot-jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-logback/springboot-logback.iml" filepath="$PROJECT_DIR$/springboot-logback/springboot-logback.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-mail/springboot-mail.iml" filepath="$PROJECT_DIR$/springboot-mail/springboot-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-multi-datasource/springboot-multi-datasource.iml" filepath="$PROJECT_DIR$/springboot-multi-datasource/springboot-multi-datasource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" filepath="$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-poi/springboot-poi.iml" filepath="$PROJECT_DIR$/springboot-poi/springboot-poi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-property/springboot-property.iml" filepath="$PROJECT_DIR$/springboot-property/springboot-property.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-quartz/springboot-quartz.iml" filepath="$PROJECT_DIR$/springboot-quartz/springboot-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-restdocs/springboot-restdocs.iml" filepath="$PROJECT_DIR$/springboot-restdocs/springboot-restdocs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-schedule/springboot-schedule.iml" filepath="$PROJECT_DIR$/springboot-schedule/springboot-schedule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-servlet/springboot-servlet.iml" filepath="$PROJECT_DIR$/springboot-servlet/springboot-servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-session/springboot-session.iml" filepath="$PROJECT_DIR$/springboot-session/springboot-session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-ssl/springboot-ssl.iml" filepath="$PROJECT_DIR$/springboot-ssl/springboot-ssl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-swagger/springboot-swagger.iml" filepath="$PROJECT_DIR$/springboot-swagger/springboot-swagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-validator/springboot-validator.iml" filepath="$PROJECT_DIR$/springboot-validator/springboot-validator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-websocket/springboot-websocket.iml" filepath="$PROJECT_DIR$/springboot-websocket/springboot-websocket.iml" />
+    </modules>
+  </component>
+</project>
