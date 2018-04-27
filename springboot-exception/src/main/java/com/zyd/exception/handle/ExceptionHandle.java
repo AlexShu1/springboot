@@ -3,7 +3,7 @@
  * 
  * @Title ExceptionHandle.java 
  * @Package com.zyd.exception.handle
- * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a> 
+ * @author <a href="mailto:shuxianfon1987@126.com">xianfeng.shu</a>
  * @date 2017年6月7日 下午4:55:59 
  * @version V1.0   
  */
@@ -27,7 +27,7 @@ import java.sql.SQLException;
  * 统一异常处理类<br>
  * 捕获程序所有异常，针对不同异常，采取不同的处理方式
  * 
- * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
+ * @author <a href="mailto:shuxianfon1987@126.com">xianfeng.shu</a>
  * @date 2017年6月7日 下午4:55:59
  * @version V1.0
  * @since JDK ： 1.7
@@ -40,7 +40,7 @@ public class ExceptionHandle {
 	 * <strong>@ExceptionHandler</strong>指定需要捕获的异常类型<br>
 	 * 捕获抛出的所有SQLException异常
 	 * 
-	 * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
+	 * @author <a href="mailto:shuxianfon1987@126.com">xianfeng.shu</a>
 	 * @param request
 	 * @param ex
 	 * @return
@@ -56,7 +56,7 @@ public class ExceptionHandle {
 	 * <strong>@ResponseStatus</strong>指定Http响应状态码：404<br>
 	 * 捕获抛出的所有NotFoundException异常
 	 * 
-	 * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
+	 * @author <a href="mailto:shuxianfon1987@126.com">xianfeng.shu</a>
 	 * @param ex
 	 * @return
 	 * @since JDK 1.7
@@ -72,7 +72,7 @@ public class ExceptionHandle {
 	 * <strong>@ResponseStatus</strong>指定Http响应状态码：400<br>
 	 * 捕获抛出的所有BadRequestException异常
 	 * 
-	 * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
+	 * @author <a href="mailto:shuxianfon1987@126.com">xianfeng.shu</a>
 	 * @param ex
 	 * @return
 	 * @since JDK 1.7
@@ -89,7 +89,7 @@ public class ExceptionHandle {
 	 * 捕获抛出的所有Exception异常<br>
 	 * 其中又通过instanceof 判断具体的异常类型，针对异常类型做处理
 	 * 
-	 * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
+	 * @author <a href="mailto:shuxianfon1987@126.com">xianfeng.shu</a>
 	 * @param request
 	 * @param ex
 	 * @return
@@ -99,7 +99,7 @@ public class ExceptionHandle {
 	@ExceptionHandler(Exception.class)
 	public ExceptionResponse handleServerErrorException(HttpServletRequest request, Exception ex) {
 		String message = ex.getMessage();
-		// Zhangyd异常
+		// Shuxf异常
 		if (ex instanceof ZhangydException) {
 			ZhangydException ze = (ZhangydException) ex;
 			return ExceptionResponseUtil.init(ze.getCode(), message);

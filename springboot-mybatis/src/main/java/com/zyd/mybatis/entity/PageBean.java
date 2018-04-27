@@ -1,5 +1,5 @@
 /**
- * Copyright [2016-2017] [yadong.zhang]
+ * Copyright [2016-2017] [xianfeng.shu]
  * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,8 @@ import java.util.List;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.testMybatis.com.rest.entity
- * User：yadong.zhang
+ * Created by xianfeng.shu on com.zyd.testMybatis.com.rest.entity
+ * User：xianfeng.shu
  * Date：2017/6/27 17:44
  */
 public class PageBean<T> implements Serializable {

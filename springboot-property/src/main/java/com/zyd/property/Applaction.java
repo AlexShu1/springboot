@@ -17,7 +17,7 @@ import com.zyd.property.config.PropertiesListenerConfig;
 import com.zyd.property.listener.PropertiesListener;
 
 /**
- * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
+ * @author <a href="mailto:shuxianfon1987@126.com">xianfeng.shu</a>
  * @date 2017年6月1日 下午3:49:30 
  * @version V1.0
  * @since JDK ： 1.7

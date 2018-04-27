@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.websocket
+ * Created by xianfeng.shu on com.zyd.websocket
  *
- * @author: yadong.zhang
+ * @author: xianfeng.shu
  * @date: 2017/11/23 13:42
  */
 @Controller

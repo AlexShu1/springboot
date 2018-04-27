@@ -68,7 +68,7 @@ src/test/java/com/zyd/AppTest.java
 5. [我的mooc](http://www.imooc.com/u/1175248/articles)
 
 ### 有任何问题可以
-- [new issue](https://github.com/zhangyd-c/springboot/issues)
+- [new issue](https://github.com/shuxianfeng/springboot/issues)
 - [给我留言](http://www.zhyd.me/guestbook)
 
 ### 如果喜欢，请多多分享、多多Star

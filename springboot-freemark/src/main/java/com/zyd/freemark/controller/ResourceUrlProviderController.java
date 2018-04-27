@@ -1,5 +1,5 @@
 /**
- * Copyright [2016-2017] [yadong.zhang]
+ * Copyright [2016-2017] [xianfeng.shu]
  * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,8 +29,8 @@ import org.springframework.web.servlet.resource.ResourceUrlProvider;
  *      spring.resources.chain.strategy.content.enabled=true
  *      spring.resources.chain.strategy.content.paths=/**
  * <p/>
- * Created by yadong.zhang on com.zyd.freemark.controller
- * Author：yadong.zhang
+ * Created by xianfeng.shu on com.zyd.freemark.controller
+ * Author：xianfeng.shu
  * Date：2017/6/29 08:49
  */
 @ControllerAdvice

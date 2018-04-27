@@ -18,7 +18,7 @@ public class Applaction {
 
     /**
      * @Description 注册webAppForIndexFilter
-     * @author zhangyd
+     * @author shuxf
      * @date 2017年4月7日 下午4:37:37
      */
     @Bean
@@ -36,7 +36,7 @@ public class Applaction {
 
     /**
      * @Description 注册WebAppListener2
-     * @author zhangyd
+     * @author shuxf
      * @date 2017年4月7日 下午5:18:01
      */
     @Bean

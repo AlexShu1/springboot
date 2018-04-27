@@ -1,5 +1,5 @@
 /**
- * Copyright [2016-2017] [yadong.zhang]
+ * Copyright [2016-2017] [xianfeng.shu]
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,9 +25,9 @@ import javax.validation.constraints.Pattern;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.model
+ * Created by xianfeng.shu on com.zyd.model
  *
- * @Author: yadong.zhang
+ * @Author: xianfeng.shu
  * @Date: 2017/10/10 13:45
  */
 public class User {

@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 
 /**
  * flyat
- * Created by yadong.zhang on com.blog.app.core.config
- * User：yadong.zhang
+ * Created by xianfeng.shu on com.blog.app.core.config
+ * User：xianfeng.shu
  * Date：2016/12/6 15:00
- * @Modify by yadong.zhang
+ * @Modify by xianfeng.shu
  *      详情请看applaction.properties文件中的配置
  */
 @Component

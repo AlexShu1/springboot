@@ -1,5 +1,5 @@
 /**
- * Copyright [2016-2017] [yadong.zhang]
+ * Copyright [2016-2017] [xianfeng.shu]
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,9 +27,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.config
+ * Created by xianfeng.shu on com.zyd.config
  *
- * @Author: yadong.zhang
+ * @Author: xianfeng.shu
  * @Date: 2017/9/14 11:26
  */
 @EnableSwagger2

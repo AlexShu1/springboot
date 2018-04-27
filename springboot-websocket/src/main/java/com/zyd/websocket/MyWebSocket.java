@@ -1,5 +1,5 @@
 /**
- * Copyright [2016-2017] [yadong.zhang]
+ * Copyright [2016-2017] [xianfeng.shu]
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -21,9 +21,9 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.websocket
+ * Created by xianfeng.shu on com.zyd.websocket
  *
- * @author: yadong.zhang
+ * @author: xianfeng.shu
  * @date: 2017/11/23 13:42
  */
 @ServerEndpoint(value = "/websocket")
