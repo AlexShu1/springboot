@@ -30,6 +30,7 @@
         <module>springboot-validator</module>
 		<module>springboot-websocket</module>
         <module>springboot-quartz</module>
+        <module>springboot-blog</module>
     </modules>
 
 	<parent>
