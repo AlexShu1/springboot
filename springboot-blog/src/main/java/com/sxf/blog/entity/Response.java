@@ -1,4 +1,4 @@
-package com.sxf.blog.entiy;
+package com.sxf.blog.entity;
 
 import com.wordnik.swagger.annotations.ApiModel;
 import com.wordnik.swagger.annotations.ApiModelProperty;

@@ -1,12 +1,17 @@
 package com.sxf.blog.controller.pc;
 
-import com.sxf.blog.entiy.Response;
+import com.sxf.blog.entity.Response;
+import com.sxf.blog.entity.UserVo;
+import com.sxf.blog.service.BlogService;
 import com.wordnik.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @Author shuxf
@@ -17,18 +22,26 @@ import org.springframework.web.bind.annotation.RestController;
 public class PcController {
     private static final Logger logger = LoggerFactory.getLogger(PcController.class);
 
+    @Autowired
+    private BlogService blogService;
+
     /**
      * 博客PC端首页接口
      */
-    @ApiOperation(value = "博客PC端首页接口", notes = "用于PC端前台博客首页的数据请求(静态数据，不含正文分页数据)", response = Response.class)
+    @ApiOperation(value = "博客PC端首页接口", notes = "获取首页中推荐的热门作者（热门用户列表）", response = Response.class)
     @RequestMapping(value = "index", method = RequestMethod.GET)
     public Response getPcIndex(){
         Response response = new Response();
 
-        logger.info("请求Blog系统的控制器成功");
-        response.setCode(200);
-        response.setData("测试数据返回");
-        response.setMessage("请求成功");
+        List<UserVo> userList = blogService.getAuthor();
+
+        if (response.getCode() == 200) {
+            response.setMessage("查询成功");
+            response.setData(userList);
+        } else {
+            response.setCode(300);
+            response.setMessage("查询失败");
+        }
         return response;
     }
 }

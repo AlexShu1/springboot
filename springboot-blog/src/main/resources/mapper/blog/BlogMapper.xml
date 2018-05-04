@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxf.blog.mapper.BlogMapper">
+  <resultMap id="BaseResultMap" type="com.sxf.blog.entity.Blog">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="circleid" jdbcType="INTEGER" property="circleid" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="subtitle" jdbcType="VARCHAR" property="subtitle" />
+    <result column="zansum" jdbcType="INTEGER" property="zansum" />
+    <result column="commentsum" jdbcType="INTEGER" property="commentsum" />
+    <result column="forwardsum" jdbcType="INTEGER" property="forwardsum" />
+    <result column="collectsum" jdbcType="INTEGER" property="collectsum" />
+    <result column="isactive" jdbcType="INTEGER" property="isactive" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="ishot" jdbcType="INTEGER" property="ishot" />
+    <result column="isessence" jdbcType="INTEGER" property="isessence" />
+    <result column="orderid" jdbcType="INTEGER" property="orderid" />
+    <result column="coverimg" jdbcType="VARCHAR" property="coverimg" />
+    <result column="hotimgurl" jdbcType="VARCHAR" property="hotimgurl" />
+    <result column="intime" jdbcType="TIMESTAMP" property="intime" />
+    <result column="totalpoint" jdbcType="INTEGER" property="totalpoint" />
+    <result column="isdel" jdbcType="INTEGER" property="isdel" />
+    <result column="isessencepool" jdbcType="INTEGER" property="isessencepool" />
+    <result column="activetype" jdbcType="INTEGER" property="activetype" />
+    <result column="activefee" jdbcType="DOUBLE" property="activefee" />
+    <result column="iscontribute" jdbcType="INTEGER" property="iscontribute" />
+    <result column="essencedate" jdbcType="DATE" property="essencedate" />
+    <result column="userid" jdbcType="VARCHAR" property="userid" />
+    <result column="oprtime" jdbcType="TIMESTAMP" property="oprtime" />
+    <result column="heat_value" jdbcType="INTEGER" property="heatValue" />
+    <result column="partsum_enddays" jdbcType="INTEGER" property="partsumEnddays" />
+    <result column="activeid" jdbcType="INTEGER" property="activeid" />
+    <result column="ishot_order" jdbcType="INTEGER" property="ishotOrder" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="isheatoperate" jdbcType="INTEGER" property="isheatoperate" />
+    <result column="countview" jdbcType="INTEGER" property="countview" />
+    <result column="category" jdbcType="INTEGER" property="category" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.sxf.blog.entity.Blog">
+    <result column="postcontent" jdbcType="LONGVARCHAR" property="postcontent" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, circleid, title, subtitle, zansum, commentsum, forwardsum, collectsum, isactive, 
+    type, ishot, isessence, orderid, coverimg, hotimgurl, intime, totalpoint, isdel, 
+    isessencepool, activetype, activefee, iscontribute, essencedate, userid, oprtime, 
+    heat_value, partsum_enddays, activeid, ishot_order, city, isheatoperate, countview, 
+    category
+  </sql>
+  <sql id="Blob_Column_List">
+    postcontent
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from bg_blog
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <!--获取首页推荐作者列表-->
+  <select id="getAuthor" resultType="com.sxf.blog.entity.UserVo" >
+    SELECT t1.id, t1.photo, t1.nickname, t2.project, t2.profile FROM bg_user t1
+      LEFT JOIN bg_profile t2 ON t1.id = t2.userid WHERE t1.isrecommend = 1
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from bg_blog
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.sxf.blog.entity.Blog">
+    insert into bg_blog (id, circleid, title, 
+      subtitle, zansum, commentsum, 
+      forwardsum, collectsum, isactive, 
+      type, ishot, isessence, 
+      orderid, coverimg, hotimgurl, 
+      intime, totalpoint, isdel, 
+      isessencepool, activetype, activefee, 
+      iscontribute, essencedate, userid, 
+      oprtime, heat_value, partsum_enddays, 
+      activeid, ishot_order, city, 
+      isheatoperate, countview, category, 
+      postcontent)
+    values (#{id,jdbcType=INTEGER}, #{circleid,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, 
+      #{subtitle,jdbcType=VARCHAR}, #{zansum,jdbcType=INTEGER}, #{commentsum,jdbcType=INTEGER}, 
+      #{forwardsum,jdbcType=INTEGER}, #{collectsum,jdbcType=INTEGER}, #{isactive,jdbcType=INTEGER}, 
+      #{type,jdbcType=INTEGER}, #{ishot,jdbcType=INTEGER}, #{isessence,jdbcType=INTEGER}, 
+      #{orderid,jdbcType=INTEGER}, #{coverimg,jdbcType=VARCHAR}, #{hotimgurl,jdbcType=VARCHAR}, 
+      #{intime,jdbcType=TIMESTAMP}, #{totalpoint,jdbcType=INTEGER}, #{isdel,jdbcType=INTEGER}, 
+      #{isessencepool,jdbcType=INTEGER}, #{activetype,jdbcType=INTEGER}, #{activefee,jdbcType=DOUBLE}, 
+      #{iscontribute,jdbcType=INTEGER}, #{essencedate,jdbcType=DATE}, #{userid,jdbcType=VARCHAR}, 
+      #{oprtime,jdbcType=TIMESTAMP}, #{heatValue,jdbcType=INTEGER}, #{partsumEnddays,jdbcType=INTEGER}, 
+      #{activeid,jdbcType=INTEGER}, #{ishotOrder,jdbcType=INTEGER}, #{city,jdbcType=VARCHAR}, 
+      #{isheatoperate,jdbcType=INTEGER}, #{countview,jdbcType=INTEGER}, #{category,jdbcType=INTEGER}, 
+      #{postcontent,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sxf.blog.entity.Blog">
+    insert into bg_blog
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="circleid != null">
+        circleid,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="subtitle != null">
+        subtitle,
+      </if>
+      <if test="zansum != null">
+        zansum,
+      </if>
+      <if test="commentsum != null">
+        commentsum,
+      </if>
+      <if test="forwardsum != null">
+        forwardsum,
+      </if>
+      <if test="collectsum != null">
+        collectsum,
+      </if>
+      <if test="isactive != null">
+        isactive,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="ishot != null">
+        ishot,
+      </if>
+      <if test="isessence != null">
+        isessence,
+      </if>
+      <if test="orderid != null">
+        orderid,
+      </if>
+      <if test="coverimg != null">
+        coverimg,
+      </if>
+      <if test="hotimgurl != null">
+        hotimgurl,
+      </if>
+      <if test="intime != null">
+        intime,
+      </if>
+      <if test="totalpoint != null">
+        totalpoint,
+      </if>
+      <if test="isdel != null">
+        isdel,
+      </if>
+      <if test="isessencepool != null">
+        isessencepool,
+      </if>
+      <if test="activetype != null">
+        activetype,
+      </if>
+      <if test="activefee != null">
+        activefee,
+      </if>
+      <if test="iscontribute != null">
+        iscontribute,
+      </if>
+      <if test="essencedate != null">
+        essencedate,
+      </if>
+      <if test="userid != null">
+        userid,
+      </if>
+      <if test="oprtime != null">
+        oprtime,
+      </if>
+      <if test="heatValue != null">
+        heat_value,
+      </if>
+      <if test="partsumEnddays != null">
+        partsum_enddays,
+      </if>
+      <if test="activeid != null">
+        activeid,
+      </if>
+      <if test="ishotOrder != null">
+        ishot_order,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="isheatoperate != null">
+        isheatoperate,
+      </if>
+      <if test="countview != null">
+        countview,
+      </if>
+      <if test="category != null">
+        category,
+      </if>
+      <if test="postcontent != null">
+        postcontent,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="circleid != null">
+        #{circleid,jdbcType=INTEGER},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subtitle != null">
+        #{subtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="zansum != null">
+        #{zansum,jdbcType=INTEGER},
+      </if>
+      <if test="commentsum != null">
+        #{commentsum,jdbcType=INTEGER},
+      </if>
+      <if test="forwardsum != null">
+        #{forwardsum,jdbcType=INTEGER},
+      </if>
+      <if test="collectsum != null">
+        #{collectsum,jdbcType=INTEGER},
+      </if>
+      <if test="isactive != null">
+        #{isactive,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="ishot != null">
+        #{ishot,jdbcType=INTEGER},
+      </if>
+      <if test="isessence != null">
+        #{isessence,jdbcType=INTEGER},
+      </if>
+      <if test="orderid != null">
+        #{orderid,jdbcType=INTEGER},
+      </if>
+      <if test="coverimg != null">
+        #{coverimg,jdbcType=VARCHAR},
+      </if>
+      <if test="hotimgurl != null">
+        #{hotimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="intime != null">
+        #{intime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="totalpoint != null">
+        #{totalpoint,jdbcType=INTEGER},
+      </if>
+      <if test="isdel != null">
+        #{isdel,jdbcType=INTEGER},
+      </if>
+      <if test="isessencepool != null">
+        #{isessencepool,jdbcType=INTEGER},
+      </if>
+      <if test="activetype != null">
+        #{activetype,jdbcType=INTEGER},
+      </if>
+      <if test="activefee != null">
+        #{activefee,jdbcType=DOUBLE},
+      </if>
+      <if test="iscontribute != null">
+        #{iscontribute,jdbcType=INTEGER},
+      </if>
+      <if test="essencedate != null">
+        #{essencedate,jdbcType=DATE},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="oprtime != null">
+        #{oprtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="heatValue != null">
+        #{heatValue,jdbcType=INTEGER},
+      </if>
+      <if test="partsumEnddays != null">
+        #{partsumEnddays,jdbcType=INTEGER},
+      </if>
+      <if test="activeid != null">
+        #{activeid,jdbcType=INTEGER},
+      </if>
+      <if test="ishotOrder != null">
+        #{ishotOrder,jdbcType=INTEGER},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="isheatoperate != null">
+        #{isheatoperate,jdbcType=INTEGER},
+      </if>
+      <if test="countview != null">
+        #{countview,jdbcType=INTEGER},
+      </if>
+      <if test="category != null">
+        #{category,jdbcType=INTEGER},
+      </if>
+      <if test="postcontent != null">
+        #{postcontent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sxf.blog.entity.Blog">
+    update bg_blog
+    <set>
+      <if test="circleid != null">
+        circleid = #{circleid,jdbcType=INTEGER},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subtitle != null">
+        subtitle = #{subtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="zansum != null">
+        zansum = #{zansum,jdbcType=INTEGER},
+      </if>
+      <if test="commentsum != null">
+        commentsum = #{commentsum,jdbcType=INTEGER},
+      </if>
+      <if test="forwardsum != null">
+        forwardsum = #{forwardsum,jdbcType=INTEGER},
+      </if>
+      <if test="collectsum != null">
+        collectsum = #{collectsum,jdbcType=INTEGER},
+      </if>
+      <if test="isactive != null">
+        isactive = #{isactive,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="ishot != null">
+        ishot = #{ishot,jdbcType=INTEGER},
+      </if>
+      <if test="isessence != null">
+        isessence = #{isessence,jdbcType=INTEGER},
+      </if>
+      <if test="orderid != null">
+        orderid = #{orderid,jdbcType=INTEGER},
+      </if>
+      <if test="coverimg != null">
+        coverimg = #{coverimg,jdbcType=VARCHAR},
+      </if>
+      <if test="hotimgurl != null">
+        hotimgurl = #{hotimgurl,jdbcType=VARCHAR},
+      </if>
+      <if test="intime != null">
+        intime = #{intime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="totalpoint != null">
+        totalpoint = #{totalpoint,jdbcType=INTEGER},
+      </if>
+      <if test="isdel != null">
+        isdel = #{isdel,jdbcType=INTEGER},
+      </if>
+      <if test="isessencepool != null">
+        isessencepool = #{isessencepool,jdbcType=INTEGER},
+      </if>
+      <if test="activetype != null">
+        activetype = #{activetype,jdbcType=INTEGER},
+      </if>
+      <if test="activefee != null">
+        activefee = #{activefee,jdbcType=DOUBLE},
+      </if>
+      <if test="iscontribute != null">
+        iscontribute = #{iscontribute,jdbcType=INTEGER},
+      </if>
+      <if test="essencedate != null">
+        essencedate = #{essencedate,jdbcType=DATE},
+      </if>
+      <if test="userid != null">
+        userid = #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="oprtime != null">
+        oprtime = #{oprtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="heatValue != null">
+        heat_value = #{heatValue,jdbcType=INTEGER},
+      </if>
+      <if test="partsumEnddays != null">
+        partsum_enddays = #{partsumEnddays,jdbcType=INTEGER},
+      </if>
+      <if test="activeid != null">
+        activeid = #{activeid,jdbcType=INTEGER},
+      </if>
+      <if test="ishotOrder != null">
+        ishot_order = #{ishotOrder,jdbcType=INTEGER},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="isheatoperate != null">
+        isheatoperate = #{isheatoperate,jdbcType=INTEGER},
+      </if>
+      <if test="countview != null">
+        countview = #{countview,jdbcType=INTEGER},
+      </if>
+      <if test="category != null">
+        category = #{category,jdbcType=INTEGER},
+      </if>
+      <if test="postcontent != null">
+        postcontent = #{postcontent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.sxf.blog.entity.Blog">
+    update bg_blog
+    set circleid = #{circleid,jdbcType=INTEGER},
+      title = #{title,jdbcType=VARCHAR},
+      subtitle = #{subtitle,jdbcType=VARCHAR},
+      zansum = #{zansum,jdbcType=INTEGER},
+      commentsum = #{commentsum,jdbcType=INTEGER},
+      forwardsum = #{forwardsum,jdbcType=INTEGER},
+      collectsum = #{collectsum,jdbcType=INTEGER},
+      isactive = #{isactive,jdbcType=INTEGER},
+      type = #{type,jdbcType=INTEGER},
+      ishot = #{ishot,jdbcType=INTEGER},
+      isessence = #{isessence,jdbcType=INTEGER},
+      orderid = #{orderid,jdbcType=INTEGER},
+      coverimg = #{coverimg,jdbcType=VARCHAR},
+      hotimgurl = #{hotimgurl,jdbcType=VARCHAR},
+      intime = #{intime,jdbcType=TIMESTAMP},
+      totalpoint = #{totalpoint,jdbcType=INTEGER},
+      isdel = #{isdel,jdbcType=INTEGER},
+      isessencepool = #{isessencepool,jdbcType=INTEGER},
+      activetype = #{activetype,jdbcType=INTEGER},
+      activefee = #{activefee,jdbcType=DOUBLE},
+      iscontribute = #{iscontribute,jdbcType=INTEGER},
+      essencedate = #{essencedate,jdbcType=DATE},
+      userid = #{userid,jdbcType=VARCHAR},
+      oprtime = #{oprtime,jdbcType=TIMESTAMP},
+      heat_value = #{heatValue,jdbcType=INTEGER},
+      partsum_enddays = #{partsumEnddays,jdbcType=INTEGER},
+      activeid = #{activeid,jdbcType=INTEGER},
+      ishot_order = #{ishotOrder,jdbcType=INTEGER},
+      city = #{city,jdbcType=VARCHAR},
+      isheatoperate = #{isheatoperate,jdbcType=INTEGER},
+      countview = #{countview,jdbcType=INTEGER},
+      category = #{category,jdbcType=INTEGER},
+      postcontent = #{postcontent,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sxf.blog.entity.Blog">
+    update bg_blog
+    set circleid = #{circleid,jdbcType=INTEGER},
+      title = #{title,jdbcType=VARCHAR},
+      subtitle = #{subtitle,jdbcType=VARCHAR},
+      zansum = #{zansum,jdbcType=INTEGER},
+      commentsum = #{commentsum,jdbcType=INTEGER},
+      forwardsum = #{forwardsum,jdbcType=INTEGER},
+      collectsum = #{collectsum,jdbcType=INTEGER},
+      isactive = #{isactive,jdbcType=INTEGER},
+      type = #{type,jdbcType=INTEGER},
+      ishot = #{ishot,jdbcType=INTEGER},
+      isessence = #{isessence,jdbcType=INTEGER},
+      orderid = #{orderid,jdbcType=INTEGER},
+      coverimg = #{coverimg,jdbcType=VARCHAR},
+      hotimgurl = #{hotimgurl,jdbcType=VARCHAR},
+      intime = #{intime,jdbcType=TIMESTAMP},
+      totalpoint = #{totalpoint,jdbcType=INTEGER},
+      isdel = #{isdel,jdbcType=INTEGER},
+      isessencepool = #{isessencepool,jdbcType=INTEGER},
+      activetype = #{activetype,jdbcType=INTEGER},
+      activefee = #{activefee,jdbcType=DOUBLE},
+      iscontribute = #{iscontribute,jdbcType=INTEGER},
+      essencedate = #{essencedate,jdbcType=DATE},
+      userid = #{userid,jdbcType=VARCHAR},
+      oprtime = #{oprtime,jdbcType=TIMESTAMP},
+      heat_value = #{heatValue,jdbcType=INTEGER},
+      partsum_enddays = #{partsumEnddays,jdbcType=INTEGER},
+      activeid = #{activeid,jdbcType=INTEGER},
+      ishot_order = #{ishotOrder,jdbcType=INTEGER},
+      city = #{city,jdbcType=VARCHAR},
+      isheatoperate = #{isheatoperate,jdbcType=INTEGER},
+      countview = #{countview,jdbcType=INTEGER},
+      category = #{category,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
