@@ -17,6 +17,54 @@
             /*background-size: cover;*/
         }
         .div2{align:center;}
+        .header-logo-div{
+            float:left;
+            height: 80px;
+            width: 80px;
+            position:relative;
+        }
+        .header-logo-a{
+            width: 40px;
+            height: 40px;
+            position:absolute;
+            top: 50%;
+            left:50%;
+            margin-top: -10px;     /*这里是小盒子高的一半*/
+            margin-left: 0px;    /*这里是小盒子宽的一半*/
+        }
+        .flex-items-center{
+            /*margin-top: -21px;*/
+            /*margin-left: 12%;*/
+            margin-top: 0px;
+            margin-left: 12%;
+            width: 1028px;
+            height: 440px;
+        }
+        .text-center{
+            width: 514px;
+            height: 440px;
+            float:left;
+        }
+        .alt-h0{
+            font-size: 48px;
+            font-weight: 300;
+        }
+        .alt-lead{
+            -webkit-font-smoothing: antialiased;
+            font-size: 21px;
+            font-weight: 300;
+        }
+        .mb-4{
+            margin-bottom: 24px !important;
+        }
+        .col-sm-login{
+            width: 514px;
+            height: 440px;
+            float:left;
+        }
+        .d-sm-none{
+            /*float: right;*/
+        }
         li{
             list-style:none;
             left:50%;
@@ -28,7 +76,14 @@
 <body>
 <div class="index-top-class">
     <div class="div2">
-        <img href="https://github.com" style="float:left; width: 80px; height: 80px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525688583176&di=b71094c0510cf2fb7b8692b2a2c9d6e8&imgtype=0&src=http%3A%2F%2Fimg2.ph.126.net%2FA7d3pI97hu3S4_UZUfT8yg%3D%3D%2F6619293095677438139.png"/>
+        <div class="header-logo-div">
+            <a class="header-logo-a" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+                <svg width="40" height="40" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+        </div>
+        <!--<img href="https://github.com" style="float:left; width: 80px; height: 80px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525688583176&di=b71094c0510cf2fb7b8692b2a2c9d6e8&imgtype=0&src=http%3A%2F%2Fimg2.ph.126.net%2FA7d3pI97hu3S4_UZUfT8yg%3D%3D%2F6619293095677438139.png"/>-->
         <nav style="float:left;">
             <ul>
                 <li style="float:left;">Features</li>
@@ -52,6 +107,63 @@
         </div>
     </div>
 </div>
-<div class="index-middle-class"></div>
+<div class="index-middle-class">
+    <div class="flex-items-center">
+        <div class="text-center">
+            <h1 class="alt-h0">Built for developers</h1>
+            <p class="alt-lead mb-4">
+                GitHub is a development platform inspired by the way you work. From <a href="/open-source" class="text-white jumbotron-link">open source</a> to <a href="/business" class="text-white jumbotron-link">business</a>, you can host and review code, manage projects, and build software alongside millions of other&nbsp;developers.
+            </p>
+        </div>
+        <div class="col-sm-login">
+            <div class="rounded-1 text-gray bg-gray-light py-4 px-4 px-md-3 px-lg-4">
+                <form class="home-hero-signup js-signup-form" autocomplete="off" action="/join" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="eI1MSlo2vRXBCeZYwmHfMteOC+SuM0VD3sbNbsmacdyX8Ws6N8++Us4dp4XPqkQIXUNbf2kbBW0Uo39xCAyZOw==">
+                    <dl class="form-group mt-0">
+                        <dt class="input-label">
+                            <label class="form-label f5" for="user[login]">Username</label>
+                        </dt>
+                        <dd>
+                            <auto-check src="/signup_check/username" csrf="5IWzBRY/T+yq055NzshkS/x7vwHu3dOOj4stVZ/NKV4GAuW1K3FLK8VLqpNWM8/1iE745DpcrkJaUAnC1IhAlw==">
+                                <input type="text" name="user[login]" id="user[login]" class="form-control form-control-lg input-block" placeholder="Pick a username" autofocus="">
+                            </auto-check>
+                        </dd>
+                    </dl>
+                    <dl class="form-group">
+                        <dt class="input-label">
+                            <label class="form-label f5" for="user[email]">Email</label>
+                        </dt>
+                        <dd>
+                            <auto-check src="/signup_check/email" csrf="fp7NJU/mjC3E9BV6VaCX0tgdnURTDWp5p3zNMOtthCuP+iYWBoCo7+1XRMpvkyAshMiQmhUqZ6HgWmwzK4tptA==">
+                                <input type="text" name="user[email]" id="user[email]" class="form-control form-control-lg input-block js-email-notice-trigger" placeholder="you@example.com">
+                            </auto-check>
+                        </dd>
+                    </dl>
+                    <dl class="form-group">
+                        <dt class="input-label">
+                            <label class="form-label f5" for="user[password]">Password</label>
+                        </dt>
+                        <dd>
+                            <auto-check src="/signup_check/password" csrf="+NQbjmobK9Nl+iGDfsy01xhpRrCcM75aX4ivccWNwrngw7aeTu2tGSm1MIefGm+1Lvo0zPtyBnn28/1HZKWFQg==">
+                                <input type="password" name="user[password]" id="user[password]" class="form-control form-control-lg input-block" placeholder="Create a password">
+                            </auto-check>
+                        </dd>
+                        <p class="form-control-note">Use at least one letter, one numeral, and seven characters.</p>
+                    </dl>
+                    <input type="hidden" name="source" class="js-signup-source" value="form-home">
+                    <input type="text" name="required_field_2862" id="required_field_2862" style="display: none" class="form-control">
+                    <input type="hidden" name="timestamp" value="1527590597294" class="form-control">
+                    <input type="hidden" name="timestamp_secret" value="43571c78b1f7064e7f39064b0d89a17f6947a1e90b0fc929a41fddd059f6c133" class="form-control">
+
+                    <button class="btn btn-primary btn-large f4 btn-block" type="submit" data-ga-click="Signup, Attempt, location:teams;">Sign up for GitHub</button>
+                    <p class="form-control-note mb-0 text-center">
+                        By clicking “Sign up for GitHub”, you agree to our
+                        <a class="" href="https://help.github.com/terms" target="_blank">terms of service</a> and
+                        <a class="" href="https://help.github.com/privacy" target="_blank">privacy statement</a>. <span class="js-email-notice">We’ll occasionally send you account related emails.</span>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
